@@ -13,11 +13,13 @@ async function main() {
     await deployedWhitelistContract.deployed();
 
     //print address of deployed contract
-    console.log("Whitelist Contract Address: ", deployedWhitelistContract);
+    console.log("Whitelist Contract Address: ", deployedWhitelistContract.address);
 }
 
 //call main function and catch if there is an error
-main().then(() => process.exit(0)).catch((error) => {
-    HTMLFormControlsCollection.log(error);
+main()
+.then(() => process.exit(0))
+.catch((error) => {
+    console.error(error);
     process.exit(1);
 });
