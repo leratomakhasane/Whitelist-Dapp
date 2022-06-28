@@ -72,7 +72,7 @@ export default function Home() {
 
      //get updated number of addresses in whitelist
      await getNumberOfWhitelisted();
-     setJoinedWhitelisted();
+     setJoinedWhitelist(true);
    }
    catch(err){
      console.error(err);
