@@ -91,11 +91,11 @@ export default function Home() {
      const whitelistContract = new Contract(
        WHITELIST_CONTRACT_ADDRESS,
        abi,
-       signer
+       provider
      );
 
      //call numberOfWhitelisted from contract
-     const _numberOfWhitelisted = await whitelistContract.numberOfAddressesWhitelisted();
+     const _numberOfWhitelisted = await whitelistContract.numAddressesWhitelisted();
      setNumberOfWhitelisted(_numberOfWhitelisted);
    }
    catch(err){
